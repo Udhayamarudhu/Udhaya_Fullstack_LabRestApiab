@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+		integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+	<title>Save Student</title>
+</head>
+
+<body>
+
+	<div class="container">
+
+
+		<hr>
+
+
+
+
+		<form action="#" th:action="@{/student/save}" th:object="${student}" method="POST">
+
+			<label>Student First Name</label>
+			<input type="text" th:field="*{firstName}" class="form-control mb-4 col-4" placeholder="Enter FirstName">
+			<label>Student Last Name</label>
+			<input type="text" th:field="*{lastName}" class="form-control mb-4 col-4" placeholder="Enter LastName">
+			<label>Course</label>
+			<input type="text" th:field="*{course}" class="form-control mb-4 col-4" placeholder="Enter course">
+			<label>Country</label>
+			<input type="text" th:field="*{country}" class="form-control mb-4 col-4" placeholder="Enter country">
+
+			<button type="submit" class="btn btn-info col-2">Save</button>
+
+		</form>
+
+		<hr>
+		<a th:href="@{/student/}">Back to Employee List</a>
+
+	</div>
+</body>
+
+</html>
